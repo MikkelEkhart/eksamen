@@ -1,0 +1,136 @@
+h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 50px;
+  font-family: "Cormorant Garamond", sans-serif;
+  font-weight: bolder;
+}
+
+.projekt1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.projekt1 img {
+  width: 80%;
+  max-width: 800px;
+  height: auto;
+  margin-top: 50px;
+  border-radius: 5px;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease;
+  cursor: pointer;
+}
+
+.projekt1 img:hover {
+  filter: grayscale(0%); /* Fjerner det grå filter, så farverne kommer frem */
+}
+
+.første {
+  text-align: center;
+  width: 90%;
+}
+
+.førsteprojekt {
+  background-color: #ffffff;
+  margin: auto;
+  padding: 20px;
+  width: 90%;
+  border-radius: 20px;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.cta-btn {
+  background-color: #7a8f52;
+  border-radius: 5px;
+  align-self: center;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-top: -20px;
+}
+
+/******************** Desktop *******************/
+
+/* --- DESKTOP VERSION (Alt på én skærm) --- */
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 6rem;
+  }
+  .projekt-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 kolonner */
+    grid-template-rows: 50vh 35vh;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .projekt-grid .førsteprojekt:nth-child(1) {
+    grid-column: 1 / -1; /* Fyld hele bredden */
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Centrer lodret */
+    justify-content: center;
+    text-align: left; /* Venstrestil teksten */
+    gap: 50px; /* Afstand mellem billede og tekst */
+    padding: 30px;
+  }
+
+  .projekt-grid .førsteprojekt:nth-child(1) .projekt1 {
+    width: 50%;
+    margin: 0;
+  }
+
+  .projekt-grid .førsteprojekt:nth-child(1) img {
+    max-height: 375px;
+    object-fit: contain;
+    padding-left: 5rem;
+  }
+  .projekt-grid .førsteprojekt:nth-child(1) .første {
+    width: 40%;
+    font-size: 1.3rem;
+  }
+
+  .projekt-grid .førsteprojekt:nth-child(1) h3 {
+    text-align: left;
+    font-size: 2rem;
+  }
+
+  .projekt-indhold {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  /* --- 3. DE 3 SMÅ PROJEKTER I BUNDEN --- */
+  .førsteprojekt {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  /* Gør billederne i bunden mindre */
+  .førsteprojekt img {
+    max-height: 15vh;
+    width: auto;
+    margin: 10px auto;
+    object-fit: contain;
+  }
+
+  /* Gør teksten i bunden mindre */
+  .førsteprojekt p {
+    font-size: 0.9rem; /* Mindre tekst i bunden */
+  }
+}

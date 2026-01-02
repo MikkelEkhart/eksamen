@@ -34,7 +34,6 @@
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 1px;
-  margin-bottom: -20px;
 }
 
 .title {
@@ -49,7 +48,6 @@
   color: white;
   font-size: 1rem;
   font-weight: 700;
-  margin-top: -20px;
 }
 
 @media (min-width: 1024px) {
