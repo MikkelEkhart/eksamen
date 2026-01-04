@@ -14,8 +14,6 @@ h3 {
 body {
   background-color: #efece4;
   overflow-x: hidden;
-  padding-bottom: 2rem;
-  padding: 1rem;
 }
 a {
   text-decoration: none;
@@ -23,7 +21,6 @@ a {
 .menu {
   display: flex;
   align-items: flex-end;
-  position: CENTER;
   top: 0;
   right: 0;
   padding: 10px;
@@ -64,7 +61,22 @@ a {
   border-radius: 5px;
   align-self: center;
 }
+/**************** Footer ******************/
+.icon-tabler {
+  color: #bc002d;
+  width: 50px;
+  height: 50px;
+}
 
+footer {
+  background-color: #292929;
+  text-align: center;
+  padding: 50px;
+}
+
+.footerh3 {
+  color: #efece4;
+}
 @media (min-width: 1024px) {
   .menu a {
     font-size: 1.5rem;
