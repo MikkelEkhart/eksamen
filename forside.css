@@ -3,13 +3,13 @@
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  padding-top: 35px;
+  padding-top: 110px;
   overflow: hidden;
 }
 
 .cirkel {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   background-color: #bc002d;
   border-radius: 50%;
   flex-shrink: 0;
@@ -20,9 +20,9 @@
 }
 
 .bonsai {
-  margin-top: auto;
+  margin-top: -5px;
   width: 100%;
-  max-width: 350px;
+  max-width: 500px;
   height: auto;
   display: block;
   position: relative;
@@ -32,14 +32,15 @@
 .name {
   color: white;
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .title {
   color: black;
-  font-size: 3.5rem; /* Stor tekst */
-  font-weight: 900; /* Meget fed */
+  font-size: 3.5rem;
+  font-weight: 900;
   letter-spacing: 2px;
   white-space: nowrap;
 }
@@ -47,43 +48,55 @@
 .jp {
   color: white;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 @media (min-width: 1024px) {
-  /* 1. Skift retning til vandret */
   .hero {
-    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    padding: 0;
   }
 
   .cirkel {
-    width: 600px; /* Meget større cirkel */
-    height: 600px;
-    margin-right: 300px; /* Skub træet lidt væk */
+    width: 675px;
+    height: 675px;
     margin-bottom: 150px;
+    flex-shrink: 0;
+    margin-right: 350px;
   }
 
   .title {
-    font-size: 8rem; /* Kæmpe tekst */
-    color: black; /* Sort tekst som på billedet */
-    /* Den bryder automatisk rammen pga. din white-space: nowrap */
+    font-size: 10rem;
+    line-height: 1;
   }
 
-  .name,
-  .jp {
+  .name {
     font-size: 2rem;
+    margin-bottom: 10px;
   }
 
-  /* 3. Placer Bonsai træet til højre */
+  .jp {
+    font-size: 2.5rem;
+    margin-top: 10px;
+  }
+
   .bonsai {
     position: absolute;
-    margin-left: 800px;
-    max-height: auto; /* Fylder 45% af skærmbredden */
-    max-width: 600px;
-    margin-top: 190px;
-    z-index: 1; /* Ligger under teksten hvis de rammer hinanden */
+
+    bottom: -10%;
+    right: 2%;
+
+    height: 96vh;
+    width: auto;
+    max-width: none;
+
+    margin: 0;
+    z-index: 2;
   }
 }

@@ -4,133 +4,149 @@ h2 {
   margin-top: 50px;
   font-family: "Cormorant Garamond", sans-serif;
   font-weight: bolder;
-}
-
-.projekt1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 50px;
-}
-
-.projekt1 img {
-  width: 80%;
-  max-width: 800px;
-  height: auto;
-  margin-top: 50px;
-  border-radius: 5px;
-  filter: grayscale(100%);
-  transition: filter 0.4s ease;
-  cursor: pointer;
-}
-
-.projekt1 img:hover {
-  filter: grayscale(0%); /* Fjerner det grå filter, så farverne kommer frem */
-}
-
-.første {
-  text-align: center;
-  width: 90%;
+  margin-bottom: 2rem;
 }
 
 .førsteprojekt {
   background-color: #ffffff;
   margin: auto;
-  padding: 20px;
+  margin-bottom: 30px;
+  padding: 30px;
   width: 90%;
   border-radius: 20px;
-  margin-top: 3rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.projekt1 {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.projekt1 img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease;
+}
+
+.projekt1 img:hover {
+  filter: grayscale(0%);
+}
+
+.projekt-indhold {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.projekt-indhold h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-family: "Montserrat", sans-serif;
+}
+.projekt-indhold p {
+  font-family: "Lato", sans-serif;
+  line-height: 1.8;
+}
+.projekt-indhold .første {
+  width: 100%;
+  font-size: 1rem;
+  margin: 0;
 }
 
 .cta-btn {
   background-color: #7a8f52;
-  border-radius: 5px;
-  align-self: center;
   color: white;
   padding: 10px 20px;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 20px;
-  margin-top: -20px;
+  font-size: 1rem;
 }
 
-/******************** Desktop *******************/
-
-/* --- DESKTOP VERSION (Alt på én skærm) --- */
-@media (min-width: 1024px) {
+@media (min-width: 840px) {
   h2 {
     font-size: 6rem;
   }
+
   .projekt-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* 3 kolonner */
-    grid-template-rows: 50vh 35vh;
-    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 40px;
   }
 
+  /* =========================================
+     1. DET STORE PROJEKT (Øverst)
+     ========================================= */
   .projekt-grid .førsteprojekt:nth-child(1) {
-    grid-column: 1 / -1; /* Fyld hele bredden */
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* Centrer lodret */
-    justify-content: center;
-    text-align: left; /* Venstrestil teksten */
-    gap: 50px; /* Afstand mellem billede og tekst */
-    padding: 30px;
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 50px;
+    padding: 50px;
+
+    align-items: center;
+    text-align: left;
+    width: auto;
   }
 
   .projekt-grid .førsteprojekt:nth-child(1) .projekt1 {
-    width: 50%;
-    margin: 0;
+    width: 100%;
+    margin-bottom: 0;
   }
 
   .projekt-grid .førsteprojekt:nth-child(1) img {
-    max-height: 375px;
-    object-fit: contain;
-    padding-left: 5rem;
+    max-height: none;
   }
-  .projekt-grid .førsteprojekt:nth-child(1) .første {
-    width: 40%;
-    font-size: 1.3rem;
+
+  .projekt-grid .førsteprojekt:nth-child(1) .projekt-indhold {
+    align-items: flex-start;
+    text-align: left;
   }
 
   .projekt-grid .førsteprojekt:nth-child(1) h3 {
-    text-align: left;
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
-  .projekt-indhold {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
+  .projekt-grid .førsteprojekt:nth-child(1) .første {
+    font-size: 1.2rem;
   }
 
-  /* --- 3. DE 3 SMÅ PROJEKTER I BUNDEN --- */
+  /* =========================================
+     2. DE 3 SMÅ PROJEKTER (Nederst)
+     ========================================= */
+
   .førsteprojekt {
-    display: flex;
-    flex-direction: column;
+    height: 100%;
+    width: auto;
+    margin: 0;
+    padding: 25px;
     justify-content: flex-start;
-    padding: 20px;
-    overflow: hidden;
   }
 
-  /* Gør billederne i bunden mindre */
-  .førsteprojekt img {
-    max-height: 15vh;
-    width: auto;
-    margin: 10px auto;
+  .førsteprojekt:not(:first-child) img {
+    height: 200px;
     object-fit: contain;
   }
 
-  /* Gør teksten i bunden mindre */
-  .førsteprojekt p {
-    font-size: 0.9rem; /* Mindre tekst i bunden */
+  .førsteprojekt:not(:first-child) .projekt-indhold {
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  .førsteprojekt:not(:first-child) .cta-btn {
+    margin-top: auto;
   }
 }

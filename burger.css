@@ -1,0 +1,94 @@
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #efece4;
+  z-index: 1000;
+}
+
+/* --- LOGO STYRING --- */
+.logo a {
+  display: block; /* Sikrer linket fylder det det skal */
+}
+
+.logo svg {
+  width: 80px; /* Juster størrelsen på dit logo her */
+  height: auto;
+  display: block;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 1001;
+}
+
+.burger .line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #231f20; /* Sort farve på stregerne */
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* =========================================
+   MOBIL VISNING (Under 800px)
+   ========================================= */
+@media screen and (max-width: 800px) {
+  /* 1. Vis burger-ikonet */
+  .burger {
+    display: block;
+  }
+
+  /* 2. Skjul den almindelige menu */
+  .menu {
+    position: fixed; /* Låser menuen fast til skærmen */
+    top: 0;
+    right: 0;
+    height: 100vh; /* Fyld hele højden */
+    width: 100%; /* Fyld hele bredden */
+    background-color: #f4f1ea; /* Vi SKAL have farve på selve menuen, ellers kan man ikke læse teksten ovenpå træet */
+
+    flex-direction: column; /* Punkter under hinanden */
+    align-items: center;
+    justify-content: center;
+
+    transform: translateX(100%); /* Gem menuen ude til højre */
+    transition: transform 0.4s ease-in-out;
+  }
+
+  /* 3. Styling af links på mobil */
+  .menu li {
+    margin: 20px 0;
+  }
+
+  .menu a {
+    font-size: 2rem; /* Store links på mobil */
+  }
+
+  /* --- NÅR MENUEN ER ÅBEN (Active) --- */
+
+  /* Vis menuen ved at skubbe den ind */
+  nav.active .menu {
+    transform: translateX(0%);
+  }
+
+  /* Lav burgeren om til et kryds */
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+  }
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+}

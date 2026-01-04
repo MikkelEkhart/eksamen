@@ -12,70 +12,84 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
         rel="stylesheet">
     <title>Portfolio</title>
+    <link rel="js" href="burger.js">
+    <link rel="stylesheet" href="burger.css">
+    <link rel="icon" type="image/svg+xml" href="imgs/favicon.svg">
 </head>
 
 <body>
     <header>
         <section class="logo">
             <?xml version="1.0" encoding="UTF-8"?>
-            <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 149.57 149.57">
-                <!-- Generator: Adobe Illustrator 30.1.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 136)  -->
-                <defs>
-                    <style>
-                        .st0 {
-                            fill: #bc2030;
-                        }
+            <a href="index.html">
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 149.57 149.57">
+                    <!-- Generator: Adobe Illustrator 30.1.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 136)  -->
+                    <defs>
+                        <style>
+                            .st0 {
+                                fill: #bc2030;
+                            }
 
-                        .st1,
-                        .st2,
-                        .st3 {
-                            isolation: isolate;
-                        }
+                            .st1,
+                            .st2,
+                            .st3 {
+                                isolation: isolate;
+                            }
 
-                        .st2 {
-                            font-size: 36px;
-                        }
+                            .st2 {
+                                font-size: 36px;
+                            }
 
-                        .st2,
-                        .st3 {
-                            fill: #231f20;
-                            font-family: KozGoPr6N-Regular-83pv-RKSJ-H, 'Kozuka Gothic Pr6N';
-                        }
+                            .st2,
+                            .st3 {
+                                fill: #231f20;
+                                font-family: KozGoPr6N-Regular-83pv-RKSJ-H, 'Kozuka Gothic Pr6N';
+                            }
 
-                        .st3 {
-                            font-size: 24px;
-                        }
-                    </style>
-                </defs>
-                <circle class="st0" cx="74.79" cy="74.79" r="74.79" />
-                <g class="st1">
-                    <text class="st2" transform="translate(9.99 70.21) scale(.89 1)">
-                        <tspan x="0" y="0">ミッケル</tspan>
-                    </text>
-                </g>
-                <g class="st1">
-                    <text class="st3" transform="translate(25.76 102.9) scale(.95 1)">
-                        <tspan x="0" y="0">ストーム</tspan>
-                    </text>
-                </g>
-            </svg>
+                            .st3 {
+                                font-size: 24px;
+                            }
+                        </style>
+                    </defs>
+                    <circle class="st0" cx="74.79" cy="74.79" r="74.79" />
+                    <g class="st1">
+                        <text class="st2" transform="translate(9.99 70.21) scale(.89 1)">
+                            <tspan x="0" y="0">ミッケル</tspan>
+                        </text>
+                    </g>
+                    <g class="st1">
+                        <text class="st3" transform="translate(25.76 102.9) scale(.95 1)">
+                            <tspan x="0" y="0">ストーム</tspan>
+                        </text>
+                    </g>
+                </svg>
+            </a>
         </section>
         <nav>
             <ul class="menu">
                 <li><a href="projekter.html">PROJEKTER</a></li>
-                <li><a href="fitness.html">OM MIG</a></li>
+                <li><a href="ommig.html">OM MIG</a></li>
             </ul>
+            <button class="burger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
         </nav>
     </header>
-    <div class="hero">
-        <div class="cirkel">
-            <h2 class="name">MIKKEL EKHART STORM</h2>
-            <h1 class="title">PORTFOLIO</h1>
-            <h2 class="jp">ポートフォリオ</h2>
-        </div>
+    <main>
+        <div class="hero">
+            <div class="cirkel">
+                <h2 class="name">MIKKEL EKHART STORM</h2>
+                <h1 class="title">PORTFOLIO</h1>
+                <h2 class="jp">ポートフォリオ</h2>
+            </div>
 
-        <img src="imgs/bonsai.webp" alt="bonsai" class="bonsai">
-    </div>
+            <img src="imgs/bonsai.webp" alt="bonsai" class="bonsai">
+        </div>
+    </main>
+
+    <script src="burger.js"></script>
 </body>
 
 </html>
