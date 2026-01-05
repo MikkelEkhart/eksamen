@@ -1,0 +1,135 @@
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  padding-bottom: 80px;
+}
+
+h2 {
+  font-family: "Cormorant Garamond", serif;
+  color: #292929;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+/* Din globale H3 regel (Gælder mobilen og generelt) */
+h3 {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  margin-top: 4rem; /* Stor afstand på mobil er fint */
+  margin-bottom: 1.5rem;
+  color: #292929;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  line-height: 1.8;
+  color: #292929;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto; /* Centreret tekst på mobil */
+  margin-bottom: 2rem;
+}
+
+/* --- Video / Billede (Mobil) --- */
+.gif {
+  display: block;
+  width: 100%;
+  max-width: 400px; /* Begræns bredden på mobil */
+  height: auto;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+/* --- Fakta Boks (Mobil styling) --- */
+.fakta-boks {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.05); /* Lys grå */
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 40px; /* Luft ned til teksten på mobil */
+}
+
+.fakta-boks h3 {
+  font-size: 0.95rem;
+  color: #bc2030; /* Rød logo farve */
+  margin-top: 0; /* Nulstil global h3 margin her */
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.fakta-boks p {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+footer h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* =========================================
+   2. DESKTOP LAYOUT (Min-width: 800px)
+   ========================================= */
+@media (min-width: 800px) {
+  main {
+    padding-bottom: 150px;
+  }
+
+  h2 {
+    margin-bottom: 5rem;
+    font-size: 6rem;
+  }
+
+  .profil-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .venstre-kolonne {
+    position: sticky;
+    top: 10px;
+  }
+
+  .gif {
+    max-width: 900px; /* Udnytter hele bredden i kolonnen */
+    margin: 0;
+  }
+
+  .førstesemester {
+    margin-top: -5px;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #bc2030;
+    text-transform: uppercase;
+  }
+
+  .hojre-kolonne h3:not(.førstesemester) {
+    text-align: left;
+    margin-top: 60px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #bc2030;
+    text-transform: uppercase;
+  }
+
+  .hojre-kolonne p {
+    text-align: left;
+    max-width: 100%;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .bund {
+    margin-bottom: 0;
+  }
+  .hojre-kolonne h3:last-of-type {
+    margin-top: 60px; /* Juster dette tal for mere/mindre afstand */
+  }
+}
