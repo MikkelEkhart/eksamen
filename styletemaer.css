@@ -10,7 +10,7 @@ h2 {
   font-size: 3rem;
   margin-bottom: 50px;
   line-height: 1.1;
-  color: #292929;
+  color: var(--text-moerk);
 }
 
 h3 {
@@ -18,7 +18,7 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.9rem;
-  color: #666;
+  color: var(--text-graa);
   margin-bottom: 15px;
 }
 

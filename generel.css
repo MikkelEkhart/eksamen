@@ -4,6 +4,23 @@
   box-sizing: border-box;
 }
 
+:root {
+  /* --- Hovedfarver --- */
+  --japanroed: #bc002d;
+  --baggrund: #efece4;
+  --header: #f4f1ea;
+  --white: #ffffff;
+
+  /* --- Tekstfarver --- */
+  --text-moerk: #292929;
+  --text-graa: #666666;
+  --text-sort: #231f20;
+
+  /* --- Knapper & Elementer --- */
+  --btn-groen: #7a8f52;
+  --btn-groen-hover: #5e6e3d;
+}
+
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -22,11 +39,11 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 1.9rem;
-  color: #666;
+  color: var(--text-graa);
   margin-bottom: 15px;
 }
 body {
-  background-color: #efece4;
+  background-color: var(--baggrund);
   overflow-x: hidden;
 }
 a {
@@ -45,7 +62,7 @@ a {
 
 .menu a {
   text-decoration: none;
-  color: black;
+  color: var(--text-sort);
   font-weight: 550;
   position: relative;
   padding-bottom: 5px;
@@ -58,7 +75,7 @@ a {
   height: 3px;
   bottom: 0;
   left: 0;
-  background-color: #bc002d;
+  background-color: var(--japanroed);
 
   transform: scaleX(0);
   transform-origin: bottom right;
@@ -71,8 +88,8 @@ a {
 }
 
 .cta-btn {
-  background-color: #7a8f52;
-  color: white;
+  background-color: var(--btn-groen);
+  color: var(--white);
   padding: 12px 25px;
   border: none;
   border-radius: 5px;
@@ -86,27 +103,26 @@ a {
   transition: all 0.3s ease;
 }
 
-/* --- HOVER EFFEKT --- */
 .cta-btn:hover {
-  background-color: #5e6e3d;
+  background-color: var(--btn-groen-hover);
   transform: scale(1.05);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 /**************** Footer ******************/
 .icon-tabler {
-  color: #bc002d;
+  color: var(--japanroed);
   width: 50px;
   height: 50px;
 }
 
 footer {
-  background-color: #292929;
+  background-color: var(--text-moerk);
   text-align: center;
   padding: 50px;
 }
 
 .footerh3 {
-  color: #efece4;
+  color: var(--baggrund);
 }
 @media (min-width: 840) {
   .menu a {

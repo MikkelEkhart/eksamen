@@ -7,18 +7,17 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #efece4;
+  background-color: var(--baggrund);
   z-index: 1000;
   font-size: 1.5rem;
 }
 
-/* --- LOGO STYRING --- */
 .logo a {
-  display: block; /* Sikrer linket fylder det det skal */
+  display: block;
 }
 
 .logo svg {
-  width: 80px; /* Juster størrelsen på dit logo her */
+  width: 80px;
   height: auto;
   display: block;
 }
@@ -35,38 +34,32 @@ header {
   display: block;
   width: 25px;
   height: 3px;
-  background-color: #231f20; /* Sort farve på stregerne */
+  background-color: var(--text-sort);
   margin: 5px 0;
   transition: all 0.3s ease;
 }
 
-/* =========================================
-   MOBIL VISNING (Under 800px)
-   ========================================= */
-@media screen and (max-width: 800px) {
-  /* 1. Vis burger-ikonet */
+@media screen and (max-width: 840px) {
   .burger {
     display: block;
   }
 
-  /* 2. Skjul den almindelige menu */
   .menu {
-    position: fixed; /* Låser menuen fast til skærmen */
+    position: fixed;
     top: 0;
     right: 0;
-    height: 100vh; /* Fyld hele højden */
-    width: 100%; /* Fyld hele bredden */
-    background-color: #f4f1ea; /* Vi SKAL have farve på selve menuen, ellers kan man ikke læse teksten ovenpå træet */
+    height: 100vh;
+    width: 100%;
+    background-color: var(--baggrund);
 
-    flex-direction: column; /* Punkter under hinanden */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    transform: translateX(100%); /* Gem menuen ude til højre */
+    transform: translateX(100%);
     transition: transform 0.4s ease-in-out;
   }
 
-  /* 3. Styling af links på mobil */
   .menu li {
     margin: 20px 0;
   }
@@ -75,9 +68,6 @@ header {
     font-size: 2rem; /* Store links på mobil */
   }
 
-  /* --- NÅR MENUEN ER ÅBEN (Active) --- */
-
-  /* Vis menuen ved at skubbe den ind */
   nav.active .menu {
     transform: translateX(0%);
   }

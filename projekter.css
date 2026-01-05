@@ -5,11 +5,11 @@ h2 {
   font-family: "Cormorant Garamond", sans-serif;
   font-weight: bolder;
   margin-bottom: 2rem;
-  color: #292929;
+  color: var(--text-moerk);
 }
 
 .førsteprojekt {
-  background-color: #ffffff;
+  background-color: var(--white);
   margin: auto;
   margin-bottom: 30px;
   padding: 30px;
@@ -63,8 +63,8 @@ h2 {
 }
 
 .cta-btn {
-  background-color: #7a8f52;
-  color: white;
+  background-color: var(--btn-groen);
+  color: var(--white);
   padding: 10px 20px;
   border: none;
   border-radius: 5px;

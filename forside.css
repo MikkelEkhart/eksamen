@@ -10,7 +10,7 @@
 .cirkel {
   width: 300px;
   height: 300px;
-  background-color: #bc002d;
+  background-color: var(--japanroed);
   border-radius: 50%;
   flex-shrink: 0;
   display: flex;
@@ -30,7 +30,7 @@
 }
 
 .name {
-  color: white;
+  color: var(--white);
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 1px;
@@ -38,7 +38,7 @@
 }
 
 .title {
-  color: #292929;
+  color: var(--text-moerk);
   font-size: 3.5rem;
   font-weight: 900;
   letter-spacing: 2px;
@@ -46,7 +46,7 @@
 }
 
 .jp {
-  color: white;
+  color: var(--white);
   font-size: 1rem;
   font-weight: 800;
 }
