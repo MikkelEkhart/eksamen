@@ -73,7 +73,7 @@ footer h3 {
 /* =========================================
    2. DESKTOP LAYOUT (Min-width: 800px)
    ========================================= */
-@media (min-width: 800px) {
+@media (min-width: 840px) {
   main {
     padding-bottom: 150px;
   }

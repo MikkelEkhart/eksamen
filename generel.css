@@ -4,6 +4,26 @@
   box-sizing: border-box;
 }
 
+body {
+  zoom: 0.75;
+}
+body.forside-body {
+  zoom: normal;
+}
+
+body.forside-body header {
+  zoom: 0.75;
+}
+
+@media screen and (max-width: 840px) {
+  .burger {
+    display: block;
+  }
+  body .menu {
+    zoom: 1.333;
+  }
+}
+
 :root {
   /* --- Hovedfarver --- */
   --japanroed: #bc002d;
@@ -31,7 +51,6 @@ main.forside {
   padding: 0 !important;
   max-width: 100%;
 
-  padding-bottom: -40px !important;
   padding-top: 0;
 }
 h3 {
@@ -124,7 +143,7 @@ footer {
 .footerh3 {
   color: var(--baggrund);
 }
-@media (min-width: 840) {
+@media (min-width: 840px) {
   .menu a {
     font-size: 1.5rem;
   }
