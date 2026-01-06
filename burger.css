@@ -1,0 +1,85 @@
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--baggrund);
+  z-index: 1000;
+  font-size: 1.5rem;
+}
+
+.logo a {
+  display: block;
+}
+
+.logo svg {
+  width: 80px;
+  height: auto;
+  display: block;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 1001;
+}
+
+.burger .line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-sort);
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 840px) {
+  .burger {
+    display: block;
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--baggrund);
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .menu li {
+    margin: 20px 0;
+  }
+
+  .menu a {
+    font-size: 2rem; /* Store links på mobil */
+  }
+
+  nav.active .menu {
+    transform: translateX(0%);
+  }
+
+  /* Lav burgeren om til et kryds */
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+  }
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+}

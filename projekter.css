@@ -1,0 +1,154 @@
+h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 50px;
+  font-family: "Cormorant Garamond", sans-serif;
+  font-weight: bolder;
+  margin-bottom: 2rem;
+  color: var(--text-moerk);
+}
+
+.førsteprojekt {
+  background-color: var(--white);
+  margin: auto;
+  margin-bottom: 30px;
+  padding: 30px;
+  width: 90%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projekt1 {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.projekt1 img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease;
+}
+
+.projekt1 img:hover {
+  filter: grayscale(0%);
+}
+
+.projekt-indhold {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.projekt-indhold h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-family: "Montserrat", sans-serif;
+}
+.projekt-indhold p {
+  font-family: "Lato", sans-serif;
+  line-height: 1.8;
+}
+.projekt-indhold .første {
+  width: 100%;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.cta-btn {
+  background-color: var(--btn-groen);
+  color: var(--white);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+@media (min-width: 840px) {
+  h2 {
+    font-size: 6rem;
+  }
+
+  .projekt-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    margin-bottom: 10rem;
+  }
+
+  /* =========================================
+     1. DET STORE PROJEKT (Øverst)
+     ========================================= */
+  .projekt-grid .førsteprojekt:nth-child(1) {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 50px;
+    padding: 50px;
+
+    align-items: center;
+    text-align: left;
+    width: auto;
+  }
+
+  .projekt-grid .førsteprojekt:nth-child(1) .projekt1 {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .projekt-grid .førsteprojekt:nth-child(1) img {
+    max-height: none;
+  }
+
+  .projekt-grid .førsteprojekt:nth-child(1) .projekt-indhold {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .projekt-grid .førsteprojekt:nth-child(1) h3 {
+    font-size: 2.5rem;
+  }
+
+  .projekt-grid .førsteprojekt:nth-child(1) .første {
+    font-size: 1.2rem;
+  }
+
+  /* =========================================
+     2. DE 3 SMÅ PROJEKTER (Nederst)
+     ========================================= */
+
+  .førsteprojekt {
+    height: 100%;
+    width: auto;
+    margin: 0;
+    padding: 25px;
+    justify-content: flex-start;
+  }
+
+  .førsteprojekt:not(:first-child) img {
+    height: 200px;
+    object-fit: contain;
+  }
+
+  .førsteprojekt:not(:first-child) .projekt-indhold {
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  .førsteprojekt:not(:first-child) .cta-btn {
+    margin-top: auto;
+  }
+}
